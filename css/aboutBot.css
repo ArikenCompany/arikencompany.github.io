@@ -1,0 +1,79 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0, 206, 141);
+    align-items: center;
+}
+
+body {
+    background-color: #b8bd73;
+}
+
+.ArikenCompanyJpn {
+    font-size: 70px;
+    margin-left: 600px;
+    font-weight: bold;
+    color: white;
+    transform: translate(30px, -20px);
+    white-space: nowrap;
+}
+
+.ArikenCompanyEng {
+    font-size: 40px;
+    color: white;
+    font-family: "Comic Sans MS";
+    transform: translate(-450px, 40px);
+}
+
+input {
+    background-color: #00ce8d;
+    border: 5px ridge #b8bd73;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(0, 206, 141);
+    border: 5px ridge #b8bd73;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+.openIndexButton {
+    transform: translate(-150px);
+}
+
+.openCommandButton {
+    transform: translate(-100px);
+}
+
+.openAboutBotButton {
+    transform: translate(-50px);
+}
+
+.aboutBotTitle {
+    font-size: 40px;
+    font-weight: bold;
+    transform: translate(730px, -380px);
+}
+
+.aboutBot {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+    transform: translate(300px, -350px);
+}
+
+.aboutBotBack {
+    width: 1300px;
+    height: 500px;
+    background-color: #C1D8AC;
+    transform: translate(270px, 80px);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArikenCompany</title>
+    <link rel="stylesheet" href="./css/commands.css">
+    <link rel="shortcut icon" href="./img/2022-06-07_182916.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="ArikenCompanyJpn">ありけんカンパニー</div>
+        <div class="ArikenCompanyEng">ArikenCompany</div>
+        <input type="button" value="ホーム" onclick="location.href = './index.html'" class="openIndexButton">
+        <input type="button" value="コマンド" onclick="location.href = './commands.html'" class="openCommandButton">
+        <button type="button" onclick="location.href = './aboutBot.html'" class="openAboutBotButton">ArikenCompany<br>　　とは</button>
+    </header>
+    <div class="commandTitle">コマンド一覧</div>
+    <div class="commandWarning">※この一覧はリアルタイムで更新されるものではありません</div>
+    <div class="commandNormalTitle">一般ユーザー向けコマンド</div>
+    <div class="commandNormal">!rank : VALORANTのランク<br>!uptime : 配信経過時間<br>!member : メンバー<br>!wins : VALORANTのコンペ直近5試合の勝率<br>!sens : VALORANTの感度<br>!now : 現在やっていること<br>!sns : snsのコマンド<br>!twitch : twitchのURL<br>!youtube : youtubeのURL<br>!twitter : twitterのURL<br>!crosshair : VALORANTのクロスヘア設定<br>!edpi : VALORANTのEdpi<br>!commands : コマンド一覧</div>
+    <div class="commandAdminTitle">モデレーター用コマンド</div>
+    <div class="commandAdmin">!cmd on : コマンドを有効にする※1<br>!cmd off : コマンドを無効にする※1<br>!cmd add {!コマンド名} {内容} : コマンドを追加する<br>!cmd edit {!コマンド名} {内容} : コマンドの内容を変更する<br>!cmd remove {!コマンド名} : コマンドを削除する<br>!cmd cooltime : 現在のクールタイムの確認※1<br>!cmd setcooltime {秒数} : クールタイムを設定する※1</div>
+    <div class="onlyTwitchWarning">※1: これらのコマンドはdiscordでは反応しないのでtwitchのチャットルーム限定</div>
+    <div class="commandListBack"></div>
+</body>
+</html>

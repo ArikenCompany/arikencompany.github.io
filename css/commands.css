@@ -1,0 +1,132 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0, 206, 141);
+    align-items: center;
+}
+
+body {
+    background-color: #b8bd73;
+}
+
+.ArikenCompanyJpn {
+    font-size: 70px;
+    margin-left: 600px;
+    font-weight: bold;
+    color: white;
+    transform: translate(30px, -20px);
+    white-space: nowrap;
+}
+
+.ArikenCompanyEng {
+    font-size: 40px;
+    color: white;
+    font-family: "Comic Sans MS";
+    transform: translate(-450px, 40px);
+}
+
+input {
+    background-color: #00ce8d;
+    border: 5px ridge #b8bd73;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(0, 206, 141);
+    border: 5px ridge #b8bd73;
+    width: 200px;
+    height: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+.openIndexButton {
+    transform: translate(-150px);
+}
+
+.openCommandButton {
+    transform: translate(-100px);
+}
+
+.openAboutBotButton {
+    transform: translate(-50px);
+}
+
+.commandTitle {
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 780px;
+    transform: translate(-20px, 100px);
+    z-index: 10;
+    position: relative;
+    color: black;
+}
+
+.commandListBack {
+    width: 1700px;
+    height: 800px;
+    background-color: #C1D8AC;
+    margin-left: 80px;
+    transform: translate(0px, -930px);
+    z-index: 0;
+    position: relative;
+}
+
+.commandWarning {
+    position: relative;
+    z-index: 10;
+    color: red;
+    font-weight: bold;
+    transform: translate(1100px, 60px);
+}
+
+.commandNormalTitle {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translate(250px, 80px);
+}
+
+.commandNormal {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translate(200px, 90px);
+    line-height: 40px;
+}
+
+.commandAdminTitle {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translate(1100px, -485px);
+}
+
+.commandAdmin {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    transform: translate(1060px, -480px);
+}
+
+.onlyTwitchWarning {
+    color: red;
+    position: relative;
+    z-index: 10;
+    font-weight: bold;
+    transform: translate(1060px, -475px);
+}
