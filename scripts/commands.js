@@ -46,6 +46,7 @@ fetch("https://suzuki-dev.com:3150/commands")
         commandsTable.style.width = "60%";
         commandsTable.style.border = "1px solid black"
         commandsTable.style.borderCollapse = "collapse"
+        commandsTable.id = "commands-table"
 
         main.appendChild(commandsTable);
     })

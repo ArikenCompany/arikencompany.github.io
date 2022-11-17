@@ -99,3 +99,15 @@ ul.menu ul>li {
     display: block;
     padding: 5px;
 }
+
+@media screen and ( max-width:479px ) {
+    #commands-table {
+        width: 100%;
+    }
+    #title {
+        padding: 0px;
+    }
+    ul.menu {
+        margin-left: 0px;
+    }
+}
