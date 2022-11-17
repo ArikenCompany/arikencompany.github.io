@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArikenCompany - Document</title>
+    <link rel="stylesheet" href="../style/document.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="title">
+            <a href="./home.html">ArikenCompany</a>
+            <ul class="menu">
+                <li>
+                    <a href="">Menu</a>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./commands.html">Commands</a></li>
+                        <li><a href="./messages.html">Ranking</a></li>
+                        <li><a href="./document.html">Document</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>ArikenCompany - Document</h1>
+    <div id="main">
+        <div id="index">
+            <h2>目次</h2>
+            <a href="#for-notmanagers">
+                <h3>管理者以外向け</h3>
+            </a>
+            <a href="#about-command">・コマンドについて</a>
+            <br>
+            <a href="#about-cooltime">・クールタイムについて</a>
+            <br>
+            <a href="#about-messagecounter">・コメントカウンターについて</a>
+            <br>
+            <a href="#for-managers">
+                <h3>管理者向け</h3>
+            </a>
+            <a href="#about-manage-command">・コマンド管理について</a>
+            <br>
+            <a href="#about-value">・コマンドの内容について</a>
+            <br>
+            <a href="#about-manage-cooltime">・クールタイム管理について</a>
+            <br>
+            <a href="#expected-error">・予想されるエラーメッセージ</a>
+            <br>
+            <a href="#words">
+                <h3>言葉の定義</h3>
+            </a>
+            <a href="#Prefix">プレフィックス(prefix)</a>
+            <br>
+            <a href="#Manager">管理者</a>
+            <br>
+            <a href="#Arguments">引数</a>
+            <br>
+        </div>
+        <div id="detail">
+            <h2 id="for-notmanagers">管理者以外向け</h2>
+            <h3 id="about-command">コマンドについて</h3>
+            <div>コマンドは管理者*によって管理されています。</div>
+            <div><a style="font-weight: bold;">小文字と大文字は区別されず、全て小文字に変換し、処理されます。</a>そのため"!rank"と"!RanK"は処理上同じものとして認識されます。</div>
+            <div><a style="font-weight: bold;">プレフィックス*は全角半角が区別されません。</a>そのため"!rank"と"！rank"は処理上同じものとして認識されます。</div>
+            <div><a style="font-weight: bold;" href="./commands.html">リアルタイムで更新されるコマンドの一覧はこちら</a></div>
+            <h3 id="about-cooltime">クールタイムについて</h3>
+            <div>クールタイムとは同じコマンドを連続して使用できないようにする機能です。</div>
+            <div><a style="font-weight: bold;">クールタイムはVIP, 配信主, モデレーターには適用されません。</a></div>
+            <div>クールタイムの秒数は管理者*がいつでも自由に変更できます。</div>
+            <div><a style="font-weight: bold;">ここではクールタイムはコマンド毎に設定されます。</a></div>
+            <div>そのため、Aさんが"!rank"を使用した直後は別のBさんであっても使用することができません。</div>
+            <div>また、"!rank"が使用された直後であっても直近で使用されていない別のコマンドは使用できます。</div>
+            <h3 id="about-messagecounter">コメントカウンターについて</h3>
+            <div>その名の通り、Twitchでのコメント数をカウントする機能です。</div>
+            <div><a style="font-weight: bold;">これはTwitchのアカウントIDと紐づいているため、アカウントやアカウントIDが変更されると別の者として認識されます</a></div>
+            <a href="./messages.html">ランキングはここから見れます</a>
+            <h2 id="for-managers">管理者向け</h2>
+            <h3 id="about-manage-command">コマンド管理について</h3>
+            <div><a style="font-weight: bold;">↓コマンドを管理するためのコマンド。これらはTwitchでもDiscordでも同一。</a></div>
+            <div>・コマンドを追加 → "!addcom [コマンド名] [内容]" 例: "!addcom !test testaaaa"</div>
+            <div>・コマンドを編集 → "!editcom [コマンド名] [内容]" 例: "!editcom !test taetaeta"</div>
+            <div>・コマンドを削除 → "!removecom [コマンド名]" 例: "!removecom !test" (このコマンドは"!rmcom [名前]"に省略可能)</div>
+            <div><a style="font-weight: bold;">これらのコマンドを使用したとき、処理に成功したらその旨のメッセージが返ってきます。</a></div>
+            <div><a style="font-weight: bold;">しかし、何らかの理由で処理に成功しなかった場合、エラーメッセージが返ってきます。</a></div>
+            <div><a style="font-weight: bold;" href="#expected-error">それらのエラー文はなるべく分かりやすいように書いていますが、分からなかった場合対処法はこちらから</a></div>
+            <h3 id="about-value">コマンドの内容について</h3>
+            <div><a style="font-weight: bold;">コマンドには下記の3つの引数*を含むことができます。もちろんなにも含まずただ文字を返すコマンドにすることもできる。</a></div>
+            <div>・「mod」 → モデーレータ―専用コマンドにする 例: "mod モデーレータ―専用"</div>
+            <div>・「fetch」 → URLからfetchしてくる。***これは理解せずに使うと重大なバグを引き起こす可能性があるため、開発者以外使用禁止***</div>
+            <div>・「alias」 → コマンド使用時にすでにあるコマンドを呼び出す。 例: "alias !test"<a style="font-weight: bold;">**alias先のコマンドには何も引数を指定できません。**</a></div>
+            <div><a style="font-weight: bold;" href="#expected-error">これらの引数の指定には以下のルールがある。このルールに沿っていない内容を登録しようとするとエラーメッセージが返ってくる</a></div>
+            <div>・引数の後には半角スペースを入れる</div>
+            <div>・「mod」とそれ以外の二つは併用できる。しかし併用するときは必ず「mod」から先に記述する。(×: "alias mod !test", 〇: "mod alias !test")</div>
+            <div>・「alias」と「fetch」は併用できない</div>
+            <h3 id="about-manage-cooltime">クールタイム管理について</h3>
+            <div><a style="font-weight: bold;">↓クールタイムの管理は以下のコマンドを使用する。</a></div>
+            <div>・現在のクールタイムを確認  →  "!cooltime" or "!ct"</div>
+            <div>・クールタイムを変更  →  "!setcooltime [秒数(単位なし)]" or "!setct [秒数(単位なし)]"   例: 2分に設定  "!setcooltime 120" or "!setct 120"</div>
+            <div><a style="font-weight: bold;" href="#expected-error">これらの秒数の指定には以下のルールがある。このルールに沿っていない内容を登録しようとするとエラーメッセージが返ってくる</a></div>
+            <div>・秒数は必ず半角で指定する必要がある (×: "１２０", 〇: "120")</div>
+            <div>・秒数の中には単位(または半角数字以外の文字)などを含むことができない (×: "120秒", ×: "百二十" , 〇: "120")</div>
+            <h3 id="expected-error">予想されるエラーメッセージ</h3>
+            <div><a style="font-weight: bold;">「SyntaxError: 無効なコマンド名です」</a></div>
+            <div>・コマンド名は半角"!"で始まる必要があります</div>
+            <div><a style="font-weight: bold;">「SyntaxError: 存在しないコマンド名です」</a></div>
+            <div>・Discordの管理パネルで指定するコマンド名は存在している必要があります。</div>
+            <div><a style="font-weight: bold;">「SyntaxError: 存在するコマンド名か無効なコマンド名」</a></div>
+            <div>・!addcomで指定するコマンド名は半角"!"で始まり、存在しないコマンド名な必要があります。</div>
+            <div><a style="font-weight: bold;">「SyntaxError: 存在しないコマンド名か無効なコマンド名」</a></div>
+            <div>・!editcom, !removecom, !rmcomで指定するコマンド名は半角"!"で始まり、存在するコマンド名な必要があります。</div>
+            <div><a style="font-weight: bold;">「SyntaxError: modの後は半角スペースが必要です」</a></div>
+            <div>・コマンドの内容の引数「mod」の後には半角スペースが必要です。</div>
+            <div><a style="font-weight: bold;">「SyntaxError: alias,fetchの後は何も引数を指定できません」</a></div>
+            <div>・コマンドの内容の引数「alias」,「fetch」の後は何も引数を指定できません。</div>
+            <div>・(×: "alias mod !test", 〇: "mod alias !test")</div>
+            <div><a style="font-weight: bold;">「SyntaxError: alias, fetchの後は半角スペースとaliasでは!が必要です」</a></div>
+            <div>・コマンドの内容の引数「alias」,「fetch」の後は半角スペースが必要、また、aliasの後のコマンド名は半角"!"から始まる必要があります。</div>
+            <div>・(×: "alias!test", ×: "alias test", ×: "alias ！test", 〇: "alias !test")</div>
+            <div><a style="font-weight: bold;">「TypeError: 無効な秒数です。数のみを指定してください。」</a></div>
+            <div>・クールタイムの秒数に指定できるのは**半角数字**のみです</div>
+            <div>・(×: "１２０", ×: "120秒", ×: "百二十", 〇: "120")</div>
+            <h2 id="words">言葉の定義</h2>
+            <div><a style="font-weight: bold;" id="Prefix">プレフィックス(prefix)</a></div>
+            <div>・接頭辞</div>
+            <div>・コマンドの最初に付けるやつ</div>
+            <div>・ここでのプレフィックス(prefix)は"!"</div>
+            <div><a style="font-weight: bold;" id="Manager">管理者</a></div>
+            <div>・ここでの管理者はコマンド管理権限を所持した者の総称</div>
+            <div>・配信主, モデレーター, 別途コマンドで付与された者</div>
+            <div><a style="font-weight: bold;" id="Arguments">引数</a></div>
+            <div>・ここではコマンドの内容に含むことのできるオプション</div>
+            <div>・mod - コマンドをモデーレーター専用にする</div>
+            <div>・alias - 使用時に別コマンドを呼び出す</div>
+            <div>・fetch - URLからfetchしてくる。***これは理解せずに使うと重大なバグを引き起こす可能性があるため、開発者以外使用禁止***</div>
+        </div>
+    </div>
+    <script src="../scripts/document.js"></script>
+</body>
+
+</html>

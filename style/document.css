@@ -1,0 +1,132 @@
+html,
+body {
+    height: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+#header {
+    text-align: center;
+    align-items: center;
+    background-color: #84eb9d;
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+}
+
+#title {
+    align-items: center;
+    color: black;
+    display: flex;
+    font-family: "Comic Sans MS";
+    font-size: 43px;
+    font-weight: bold;
+    height: 70%;
+    justify-content: center;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+#title:hover {
+    background-color: #84eb9d;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+#main {
+    display: flex;
+    margin-left: 2%;
+    padding-bottom: 2%;
+}
+
+#detail {
+    margin-left: 20%;
+}
+
+#main div {
+    margin-top: 10px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#for-managers {
+    margin-top: 150px;
+}
+
+#words {
+    margin-top: 150px;
+}
+
+h3 {
+    margin-top: 50px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: underline;
+}
+
+/* メニュー */
+ul.menu {
+    font-family: "Comic Sans MS";
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 70%;
+    padding: 0;
+    font-size: 30px;
+    width:  120px;
+    height: 60px;
+    background-color: #42a35a;
+}
+
+ul.menu>li {
+    color: black;
+    display: inline-block;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ul.menu>li a {
+    color: black;
+}
+
+ul.menu li:hover {
+    background-color: #42a35a;
+}
+
+/* サブメニュー */
+ul.menu ul {
+    display: none;
+}
+
+ul.menu>li:hover ul {
+    display: block;
+    height: auto;
+    position: absolute;
+    background-color: #42a35a;
+    padding: 5px;
+    margin-left: -23px;
+}
+
+ul.menu ul>li {
+    display: block;
+    padding: 5px;
+}
