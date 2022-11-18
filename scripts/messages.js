@@ -38,6 +38,7 @@ fetch("https://suzuki-dev.com:3150/messages")
         /* テーブルボディー */
         const rankingKeys = Object.keys(sortedObj);
         rankingKeys.forEach((value, index) => {
+            if (sortedObj[value] < 30) return;
             const row = document.createElement("tr");
             const place = document.createElement("th");
             const id = document.createElement("th");
