@@ -6,6 +6,7 @@ fetch("https://suzuki-dev.com:3150/messages")
             return b[1] - a[1];
         })
         const sortedObj = Object.fromEntries(array);
+        const IGNORE_MIN_SIZE = 30;
         
         const main = document.getElementById("main");
         const rankingTable = document.createElement("table");
@@ -15,6 +16,7 @@ fetch("https://suzuki-dev.com:3150/messages")
         const rankingHeaderTitle1 = document.createElement("th");
         const rankingHeaderTitle2 = document.createElement("th");
         const rankingHeaderTitle3 = document.createElement("th");
+        const startedAt = document.createElement("div");
 
         /* ヘッダー */
         rankingHeaderTitle1.textContent = "順位";
@@ -38,7 +40,7 @@ fetch("https://suzuki-dev.com:3150/messages")
         /* テーブルボディー */
         const rankingKeys = Object.keys(sortedObj);
         rankingKeys.forEach((value, index) => {
-            if (sortedObj[value] < 30) return;
+            if (sortedObj[value] < IGNORE_MIN_SIZE) return;
             const row = document.createElement("tr");
             const place = document.createElement("th");
             const id = document.createElement("th");
@@ -56,7 +58,7 @@ fetch("https://suzuki-dev.com:3150/messages")
             row.appendChild(size);
             rankingBody.appendChild(row);
         })
-
+        startedAt.textContent = IGNORE_MIN_SIZE + "未満は圏外" + "(2022/11/18より取得開始)";
         // /* テーブル */
         rankingTable.appendChild(rankingHeader);
         rankingTable.appendChild(rankingBody);
@@ -65,4 +67,5 @@ fetch("https://suzuki-dev.com:3150/messages")
         rankingTable.style.borderCollapse = "collapse"
 
         main.appendChild(rankingTable);
+        main.appendChild(startedAt)
     });
