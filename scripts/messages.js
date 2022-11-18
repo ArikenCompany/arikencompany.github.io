@@ -2,11 +2,12 @@ fetch("https://suzuki-dev.com:3150/messages")
     .then((response) => response.json())
     .then((ranking) => {
         const array = Object.entries(ranking);
-        array.sort((a, b) => {
+        const final = array.filter((item) => { return isNaN(item[0])})
+        final.sort((a, b) => {
             return b[1] - a[1];
         })
-        const sortedObj = Object.fromEntries(array);
-        const IGNORE_MIN_SIZE = 30;
+        const sortedObj = Object.fromEntries(final);
+        const IGNORE_MIN_SIZE = 100;
         
         const main = document.getElementById("main");
         const rankingTable = document.createElement("table");
@@ -45,7 +46,11 @@ fetch("https://suzuki-dev.com:3150/messages")
             const place = document.createElement("th");
             const id = document.createElement("th");
             const size = document.createElement("th");
-            place.textContent = index;
+            if (index + 1 === 1) place.style.backgroundColor = "red"
+            if (index + 1 === 2) place.style.backgroundColor = "blue"
+            if (index + 1 === 3 ) place.style.backgroundColor = "yellow"
+            if (index + 1 > 3) place.style.backgroundColor = "gray"
+            place.textContent = index + 1;
             place.style.border = "1px solid black"
             id.textContent = value;
             id.style.textAlign = "left";
