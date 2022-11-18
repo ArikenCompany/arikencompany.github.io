@@ -45,7 +45,7 @@ fetch("https://suzuki-dev.com:3150/messages")
             const place = document.createElement("th");
             const id = document.createElement("th");
             const size = document.createElement("th");
-            place.textContent = index + 1;
+            place.textContent = index;
             place.style.border = "1px solid black"
             id.textContent = value;
             id.style.textAlign = "left";
